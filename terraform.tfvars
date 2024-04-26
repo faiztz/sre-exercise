@@ -1,0 +1,5 @@
+project_id      = "inbound-muse-421417"
+region          = "us-central1"
+instance_name   = "my-postgresql-instance"
+db_tier         = "db-f1-micro"
+db_name         = "my-postgresql-db"
