@@ -20,6 +20,22 @@ This application is a Node.js web server that displays messages fetched from a P
 - Google Cloud SDK, configured with access to your GCP account
 - Terraform CLI
 
+## GCP Setup
+
+1. **Create a GCP Project:**
+   - Go to the [Google Cloud Console](https://console.cloud.google.com/).
+   - Click on the project drop-down and then click "New Project".
+   - Fill out the project details and create the project.
+
+2. **Create and Download a Service Account Key:**
+   - In the Cloud Console, go to the "IAM & Admin > Service Accounts" section.
+   - Click "Create Service Account", enter a name, and click "Create".
+   - Assign the appropriate roles Recommended OWNER Role (e.g., Project > Owner).
+   - Click on "Create Key", select JSON, and click "Create" to download the key file.
+   - Securely store the downloaded key file.
+   - Create golder `gcp` in the root Dir and save key file in gcp folder (required for Terraform)
+
+
 ## Local Setup and Installation
 
 1. **Clone the Repository:**
