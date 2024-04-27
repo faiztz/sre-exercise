@@ -1,9 +1,12 @@
 const express = require('express');
 const { Pool } = require('pg');
+const favicon = require('serve-favicon');
 const fs = require('fs');
 const app = express();
-const port = 3000;
+const path = require('path');
+const PORT = process.env.PORT || 8080;
 
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 // Configure dotenv
 require('dotenv').config();
@@ -39,7 +42,17 @@ app.get('/', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`App running on http://localhost:${port}`);
+app.get('/health', async (req, res) => {
+    try {
+        let date = new Date();
+        res.send(`<h1>${date.toUTCString()}</h1>`);
+    } catch (err) {
+        console.error(err);
+        res.send('Error fetching data');
+    }
+});
+
+app.listen(PORT, () => {
+    console.log(`App running on port:${PORT}`);
     initDb(); // Initialize the database when the server starts
 });
