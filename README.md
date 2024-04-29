@@ -98,8 +98,8 @@ This application is a Node.js web server that displays messages fetched from a P
 
 ## Usage
 
-- **Access the application:** Navigate to `http://localhost:8080/` in your web browser to view the message from the database.
-- **Health Check:** Access `http://localhost:8080/health` to check the server health.
+- **Access the application:** Navigate to `https://alp-hello-world-app-qlm5r3w6gq-uc.a.run.app` in your web browser to view the message from the database.
+- **Health Check:** Access `https://alp-hello-world-app-qlm5r3w6gq-uc.a.run.app/health` to check the server health.
 
 ## Contributing
 
