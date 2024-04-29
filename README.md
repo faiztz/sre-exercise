@@ -12,6 +12,8 @@ This application is a Node.js web server that displays messages fetched from a P
 - **Docker Compose** - Tool for defining and running multi-container Docker applications.
 - **Terraform** - Infrastructure as Code software tool.
 - **Google Cloud Platform (GCP)** - Cloud service provider.
+- App  is using **Google Cloud Run, Google Artifact Registry, Google Cloud SQl(Postgres)** services to run the app
+
 
 ## Requirements
 
@@ -62,8 +64,20 @@ This application is a Node.js web server that displays messages fetched from a P
 4. **Start the Application:**
    - Using Docker Compose:
      ```bash
-     docker-compose up --build
+     docker-compose up
+     
      ```
+5. **Steps to deploy docker image to Google Artifact Registry**
+   - gcloud auth configure-docker us-central1-docker.pkg.dev
+
+   - Go to `app` folder run below commands to generate docker and push to artifact registry
+
+   - docker-compose up
+
+   - docker tag web-app:latest us-central1-docker.pkg.dev/inbound-muse-421417/my-docker-repo/node-app:latest
+
+   - docker push us-central1-docker.pkg.dev/inbound-muse-421417/my-docker-repo/node-app:latest
+   
 
 ## Deployment with Terraform
 
