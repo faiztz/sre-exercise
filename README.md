@@ -3,6 +3,11 @@
 
 This application is a Node.js web server that displays messages fetched from a PostgreSQL database. It is containerized using Docker and orchestrated with Docker Compose. The application infrastructure, including the PostgreSQL instance and Docker repository, is managed using Terraform in Google Cloud Platform (GCP).
 
+## Usage
+
+- **Access the application:** Navigate to (https://alp-hello-world-app-qlm5r3w6gq-uc.a.run.app) in your web browser to view the message from the database `hello world`.
+- **Health Check:** Access (https://alp-hello-world-app-qlm5r3w6gq-uc.a.run.app/health) to check the server health.
+
 ## Technology Stack
 
 - **Node.js** - Server-side JavaScript runtime.
@@ -95,11 +100,6 @@ This application is a Node.js web server that displays messages fetched from a P
    ```bash
    terraform apply
    ```
-
-## Usage
-
-- **Access the application:** Navigate to `https://alp-hello-world-app-qlm5r3w6gq-uc.a.run.app` in your web browser to view the message from the database.
-- **Health Check:** Access `https://alp-hello-world-app-qlm5r3w6gq-uc.a.run.app/health` to check the server health.
 
 ## Contributing
 
