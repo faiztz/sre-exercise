@@ -40,7 +40,7 @@ This application is a Node.js web server that displays messages fetched from a P
    - Assign the appropriate roles Recommended OWNER Role (e.g., Project > Owner).
    - Click on "Create Key", select JSON, and click "Create" to download the key file.
    - Securely store the downloaded key file.
-   - Create golder `gcp` in the root Dir and save key file in gcp folder (required for Terraform)
+   - Create folder `gcp` in the root Dir and save key file in gcp folder (required for Terraform)
 
 
 ## Local Setup and Installation
@@ -63,16 +63,21 @@ This application is a Node.js web server that displays messages fetched from a P
 
 3. **Install Dependencies:**
    ```bash
+   cd app
    npm install
    ```
-
 4. **Start the Application:**
+   ```bash
+   npm start
+   ```
+
+5. **Start the Application using docker:**
    - Using Docker Compose:
      ```bash
      docker-compose up
      
      ```
-5. **Steps to deploy docker image to Google Artifact Registry**
+6. **Steps to deploy docker image to Google Artifact Registry**
    - gcloud auth configure-docker us-central1-docker.pkg.dev
 
    - Go to `app` folder run below commands to generate docker and push to artifact registry
